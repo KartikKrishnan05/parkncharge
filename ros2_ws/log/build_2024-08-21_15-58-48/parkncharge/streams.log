@@ -1,0 +1,25 @@
+[0.887s] Invoking command in '/home/krishnan/parkncharge/ros2_ws/build/parkncharge': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/krishnan/parkncharge/ros2_ws/build/parkncharge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/krishnan/parkncharge/ros2_ws/install/parkncharge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/krishnan/parkncharge/ros2_ws/build/parkncharge/build --no-deps symlink_data
+[1.167s] running develop
+[1.169s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.169s]   warnings.warn(
+[1.337s] running egg_info
+[1.337s] creating parkncharge.egg-info
+[1.338s] writing parkncharge.egg-info/PKG-INFO
+[1.338s] writing dependency_links to parkncharge.egg-info/dependency_links.txt
+[1.338s] writing entry points to parkncharge.egg-info/entry_points.txt
+[1.338s] writing requirements to parkncharge.egg-info/requires.txt
+[1.339s] writing top-level names to parkncharge.egg-info/top_level.txt
+[1.339s] writing manifest file 'parkncharge.egg-info/SOURCES.txt'
+[1.340s] reading manifest file 'parkncharge.egg-info/SOURCES.txt'
+[1.341s] writing manifest file 'parkncharge.egg-info/SOURCES.txt'
+[1.342s] running build_ext
+[1.342s] Creating /home/krishnan/parkncharge/ros2_ws/install/parkncharge/lib/python3.10/site-packages/parkncharge.egg-link (link to .)
+[1.343s] 
+[1.343s] Installed /home/krishnan/parkncharge/ros2_ws/build/parkncharge
+[1.343s] running symlink_data
+[1.343s] creating /home/krishnan/parkncharge/ros2_ws/install/parkncharge/share/ament_index
+[1.344s] creating /home/krishnan/parkncharge/ros2_ws/install/parkncharge/share/ament_index/resource_index
+[1.344s] creating /home/krishnan/parkncharge/ros2_ws/install/parkncharge/share/ament_index/resource_index/packages
+[1.344s] symbolically linking /home/krishnan/parkncharge/ros2_ws/build/parkncharge/resource/parkncharge -> /home/krishnan/parkncharge/ros2_ws/install/parkncharge/share/ament_index/resource_index/packages
+[1.344s] symbolically linking /home/krishnan/parkncharge/ros2_ws/build/parkncharge/package.xml -> /home/krishnan/parkncharge/ros2_ws/install/parkncharge/share/parkncharge
+[1.373s] Invoked command in '/home/krishnan/parkncharge/ros2_ws/build/parkncharge' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/krishnan/parkncharge/ros2_ws/build/parkncharge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/krishnan/parkncharge/ros2_ws/install/parkncharge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/krishnan/parkncharge/ros2_ws/build/parkncharge/build --no-deps symlink_data

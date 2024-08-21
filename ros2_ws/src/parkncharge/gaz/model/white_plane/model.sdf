@@ -1,0 +1,27 @@
+<sdf version="1.6">
+    <model name="white_plane">
+        <static>true</static>
+        <link name="base_link">
+            <visual name="base_visual">
+                <geometry>
+                    <box>
+                        <size>6 2.5 0.1</size>
+                    </box>
+                </geometry>
+                <material>
+                    <ambient>1 1 1 1</ambient>  <!-- Full intensity white color -->
+                    <diffuse>1 1 1 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 0</emissive> <!-- No emission color -->
+                </material>
+            </visual>
+            <collision name="base_collision">
+                <geometry>
+                    <box>
+                        <size>6 2.5 0.1</size>
+                    </box>
+                </geometry>
+            </collision>
+        </link>
+    </model>
+</sdf>

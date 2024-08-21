@@ -1,0 +1,26 @@
+services:
+  rosgazebo:
+    user: dockeruser
+    image: rosgazebo:jammy-humble-fortress  # This is the name of the image after building
+    container_name: rosgazebo-container
+    build:
+      context: .
+      dockerfile: Dockerfile  # Assuming the Dockerfile is named 'Dockerfile'
+    volumes:
+      - type: bind
+        source: ros2_ws
+        target: /parkncharge/ros2_ws
+      - type: bind
+        source: /tmp/.X11-unix/
+        target: /tmp/.X11-unix
+    environment:
+      - DISPLAY
+      - TERM
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    network_mode: host
+    ipc: host
+    pid: host
+
+    # make the service permanently running in the background
+    command: tail -f /dev/null
