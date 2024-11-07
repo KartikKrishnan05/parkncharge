@@ -20,5 +20,6 @@
         </geometry>
       </visual>
     </link>
+      
   </model>
 </sdf>

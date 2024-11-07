@@ -1,0 +1,26 @@
+name: parkncharge-tmux
+session_name: parkncharge
+
+windows:
+  - exec-containers:
+      layout: tiled
+      panes:
+        - gazebo:
+            - docker exec -it rosgazebo-container /bin/bash
+            - cd parkncharge/ros2_ws/src/parkncharge/gaz/model/
+            - ign gazebo -v 4 -r groundadded.sdf
+        - bridge-cmd-vel:
+            - docker exec -it rosgazebo-container /bin/bash
+            - ros2 run ros_gz_bridge parameter_bridge /model/vehicle_blue/cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist
+        - bridge-odom:
+            - docker exec -it rosgazebo-container /bin/bash
+            - ros2 run ros_gz_bridge parameter_bridge /vehicle_blue/odom@nav_msgs/msg/Odometry@ignition.msgs.Odometry
+        - bridge-lidar-pose:
+            - docker exec -it rosgazebo-container /bin/bash
+            - ros2 run ros_gz_bridge parameter_bridge /world/visualize_lidar_world/pose/info@geometry_msgs/msg/PoseArray@ignition.msgs.Pose_V
+        - build-and-run:
+            - docker exec -it rosgazebo-container /bin/bash
+            - cd parkncharge/ros2_ws
+            - colcon build
+            - source install/setup.bash
+            - ros2 run parkncharge move_and_monitor_vehicle

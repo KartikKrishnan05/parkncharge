@@ -9,8 +9,8 @@
                     </box>
                 </geometry>
                 <material>
-                    <ambient>1 1 1 1</ambient>  <!-- Full intensity white color -->
-                    <diffuse>1 1 1 1</diffuse>
+                    <ambient>1 0 0 1</ambient>  <!-- Red color -->
+                    <diffuse>1 0 0 1</diffuse>  <!-- Red color -->
                     <specular>0.1 0.1 0.1 1</specular>
                     <emissive>0 0 0 0</emissive> <!-- No emission color -->
                 </material>

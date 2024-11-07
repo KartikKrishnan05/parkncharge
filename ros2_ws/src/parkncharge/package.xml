@@ -1,11 +1,21 @@
 <?xml version="1.0"?>
-<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>parkncharge</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
   <maintainer email="krishnan@iabg.de">krishnan</maintainer>
   <license>TODO: License declaration</license>
+
+  <url type="website">http://wiki.ros.org/teleop_twist_keyboard</url>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <build_depend>rclpy</build_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>  <!-- Include other necessary dependencies -->
+
+
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

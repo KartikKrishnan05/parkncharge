@@ -3,17 +3,13 @@ FROM osrf/ros:humble-desktop-full
 # Zero interaction while installing or upgrading the system via apt.
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Set up proxy
-ARG proxy
-ENV http_proxy ${proxy}
-ENV https_proxy ${proxy}
+ENV http_proxy "http://proxy.iabg.de:8080"
+ENV https_proxy "http://proxy.iabg.de:8080"
 ENV no_proxy "localhost,127.0.0.1,::1,.iabg.de"
 
-RUN if [ -n "$proxy" ]; then /bin/echo -e '\
-    Acquire::http::Proxy "http://proxy.iabg.de:8080";\n\
-    Acquire::https::Proxy "http://proxy.iabg.de:8080";' > /etc/apt/apt.conf; \
-    fi;
-
+RUN /bin/echo -e '\
+Acquire::http::Proxy "http://proxy.iabg.de:8080";\n\
+Acquire::https::Proxy "http://proxy.iabg.de:8080";' > /etc/apt/apt.conf; 
 
 # Update the system
 RUN apt-get update && apt-get -y upgrade
@@ -42,6 +38,9 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/p
 # Installing ros and gazebo packages
 RUN apt update && apt install -y ros-${ROS_DISTRO}-ros-gz
 
+# Install additional ROS 2 package for Gazebo bridge
+RUN apt-get -y install ros-humble-ros-ign-bridge
+
 # Install required packages
 RUN apt-get -y install gcc-arm-none-eabi
 COPY requirements-px4dev.txt requirements.txt
@@ -67,3 +66,7 @@ RUN echo 'PS1="(px4-docker) $PS1"' >> ~/.bashrc && \
     echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> /home/dockeruser/.bashrc && \
     echo "source /indoors/ros2_ws/install/setup.bash" >> /home/dockeruser/.bashrc && \
     echo "set -g mouse on" > /home/dockeruser/.tmux.conf
+
+ENV XDG_RUNTIME_DIR=/tmp/runtime-dockeruser
+
+ENV GAZEBO_MODEL_PATH=/parkncharge/ros2_ws/src/parkncharge/gaz

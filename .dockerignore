@@ -1,0 +1,9 @@
+# Ignore the .vscode directory
+.vscode/
+
+trash/
+
+# Ignore the build, install, and log directories in ros2_ws
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/

@@ -1,0 +1,13 @@
+material LivingRoom/Wall
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture red-sandstone-brick-wall-texture.png
+			}
+		}
+	}
+}

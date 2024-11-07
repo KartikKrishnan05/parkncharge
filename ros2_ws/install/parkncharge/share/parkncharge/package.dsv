@@ -1,9 +1,0 @@
-source;share/parkncharge/hook/pythonpath.ps1
-source;share/parkncharge/hook/pythonpath.dsv
-source;share/parkncharge/hook/pythonpath.sh
-source;share/parkncharge/hook/ament_prefix_path.ps1
-source;share/parkncharge/hook/ament_prefix_path.dsv
-source;share/parkncharge/hook/ament_prefix_path.sh
-source;../../build/parkncharge/share/parkncharge/hook/pythonpath_develop.ps1
-source;../../build/parkncharge/share/parkncharge/hook/pythonpath_develop.dsv
-source;../../build/parkncharge/share/parkncharge/hook/pythonpath_develop.sh
